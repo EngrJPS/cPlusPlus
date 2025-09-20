@@ -12,7 +12,7 @@ Note that you the different vectors will be tested against your code. You do not
 
 int main(){
 
-    vector<int> vec (10, 0);
+    vector<int> vec {10, 0, 12, 34, -99, 5, 6, 7, 8, 9};
 
     int limitNum {-99}, count{0}, i{0};
     
