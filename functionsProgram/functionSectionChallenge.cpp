@@ -96,17 +96,17 @@ Good luck!
 #include <vector>
 using namespace std;
 
-void print_vectors(vector<int> vecs);
+void print_vectors(const vector<int> vecs);
 
 void add_number_vector(vector<int> &vecs);
 
 void quit_user(bool &choice);
 
-int compare_smallest_num(vector<int>);
+int compare_smallest_num(const vector<int>);
 
-int compare_largest_num(vector<int>);
+int compare_largest_num(const vector<int>);
 
-double list_average(vector<int>);
+double list_average(const vector<int>);
 
 void user_choices(char choice, vector<int> &vecs, bool &userChoice);
 
