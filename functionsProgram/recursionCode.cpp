@@ -14,6 +14,19 @@ void isValid(int num){
     }
 }
 
+void decToBinRec(int d, string &res) {
+    if (d > 1) {
+        decToBinRec(d / 2, res);
+    }
+    res += (d % 2) + '0'; // Converting Integer Digits to Character Digits: Adding '0' to an integer digit converts it to its character representation.
+}
+
+string decToBin(int d) {
+    string res = "";
+    decToBinRec(d, res);
+    return res;
+}
+
 int decreasingCountNum (int);
 int ascendingCountNum(int, int inc=1);
 bool isPalendrome(string s);
@@ -24,7 +37,7 @@ size_t factorialCount(size_t);
 int main(){
     int number {0};
     
-    // isValid(number);
+    isValid(number);
 
     cout << decreasingCountNum(5) << endl;
     cout << "=====" << endl;
@@ -40,6 +53,8 @@ int main(){
     cout << boolalpha << isPalendrome(" ") << endl;
     cout << "Is X a palendrome? "<< endl;
     cout << boolalpha << isPalendrome("X") << endl;
+
+    cout << decToBin(3) << endl;
 
     return 0;
 }
