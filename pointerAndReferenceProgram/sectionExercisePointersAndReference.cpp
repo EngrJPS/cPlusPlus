@@ -86,13 +86,5 @@ int *apply_all(int *arr1, int size1, int *arr2, int size2){
             count++;
         }
     }
-
-    for(int i{0}; i < newArraySize; i++){
-        // cout << *(ptr_newArray+i) << " ";
-        // cout << (ptr_newArray+i) << " ";
-        // cout << ptr_newArray[i] << " ";
-        // cout << ptr_newArray++ << " ";
-    }
-
     return ptr_newArray;
 }
