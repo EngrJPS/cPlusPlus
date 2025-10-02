@@ -1,2 +1,0 @@
-C:\msys64\ucrt64\bin\ar.exe qc libmylib.a CMakeFiles/mylib.dir/Account.cpp.obj CMakeFiles/mylib.dir/AddNumbers.cpp.obj
-C:\msys64\ucrt64\bin\ranlib.exe libmylib.a
