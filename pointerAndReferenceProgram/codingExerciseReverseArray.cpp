@@ -17,12 +17,14 @@ size: The size of the array.
 using namespace std;
 
 void revArray(int*, int);
+int *revArray1(int *array, int size);
 
 int main(){
-
     int arr[] {1, 2, 3, 4, 5, 6};
     int size = sizeof(arr) / sizeof(arr[0]);
     revArray(arr, size);
+
+    int *arr2 = revArray1(arr, size);
 
     cout << "{ ";
     for(auto num : arr){
@@ -31,11 +33,18 @@ int main(){
 
     cout << "}";
 
+    cout << "{ ";
+
+    for(int i{0}; i < size; i++){
+        cout << arr2[i] << " ";
+    }
+    cout << "}" << endl;
+
     return 0;
 }
 
 void revArray(int *array, int size){
-    int *first = array;
+    int *first = array; // integer value that points to the address of some value
     int *last = array + size - 1;
 
     for(first; first < last; first++){
@@ -46,6 +55,18 @@ void revArray(int *array, int size){
     }
 }
 
+int *revArray1(int *array, int size){
+    int *first = array;
+    int *last = array + size - 1;
+    int *temp = new int[size];
+
+    for(int i{0}; i < size; i++){
+        temp[i] = *last;
+        last--;
+    }
+
+    return temp;
+}
 
 /*
     1: 1 < 6    temp: 1, last: temp
