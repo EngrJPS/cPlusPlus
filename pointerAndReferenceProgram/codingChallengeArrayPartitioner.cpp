@@ -31,20 +31,10 @@ int partition(int* arr, int size, int pivot, int& lessCount, int& greaterCount) 
 
     int pivotIndex = pivotPos;
 
-
     for(int i{0}; i < size; i++){
         if(arr[i] >= pivot){
             temp[pivotPos] = arr[i];
             pivotPos++;
-        }
-    }
-
-    for(int i{0}; i < size; i++){
-        int max = temp[0];
-        if(max < temp[i]){
-            max = temp[i];
-        }else{
-
         }
     }
 

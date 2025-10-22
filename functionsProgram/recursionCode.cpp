@@ -30,6 +30,7 @@ string decToBin(int d) {
 int decreasingCountNum (int);
 int ascendingCountNum(int, int inc=1);
 bool isPalendrome(string s);
+int sumOfDigits(size_t num);
 
 size_t factorialCount(size_t);
 
@@ -54,8 +55,10 @@ int main(){
     cout << "Is X a palendrome? "<< endl;
     cout << boolalpha << isPalendrome("X") << endl;
 
-    cout << decToBin(3) << endl;
+    cout << decToBin(100) << endl;
 
+    cout << sumOfDigits(4567) << endl;
+    
     return 0;
 }
 
@@ -92,4 +95,13 @@ bool isPalendrome(string s){
         }
     }
     return isPalendrome(s.substr(1, s.length() - 2));
+}
+
+int sumOfDigits(size_t num){
+    int sum{0};
+    if(num <= 10){
+        return num;    
+    }
+    sum += num % 10;
+    return sum + sumOfDigits(num / 10);
 }
