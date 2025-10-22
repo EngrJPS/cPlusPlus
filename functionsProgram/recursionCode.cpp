@@ -56,9 +56,10 @@ int main(){
     cout << boolalpha << isPalendrome("X") << endl;
 
     cout << decToBin(100) << endl;
-
+    
     cout << sumOfDigits(4567) << endl;
     
+    cout << sumOfDigits(123) << endl;
     return 0;
 }
 
